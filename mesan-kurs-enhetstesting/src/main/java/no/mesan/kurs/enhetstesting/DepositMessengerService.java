@@ -1,6 +1,6 @@
 package no.mesan.kurs.enhetstesting;
 
-public interface MessengerService {
+public interface DepositMessengerService {
 
 	void send(String owner, int amount);
 

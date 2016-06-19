@@ -19,11 +19,11 @@ public class BankAccountHandlerTest {
 	private BankAccount account;
 
 	@Mock
-	private MessengerService messengerService;
+	private DepositMessengerService depositMessengerService;
 
 	@Before
 	public void setUp() {
-		handler = new BankAccountHandler(account, messengerService);
+		handler = new BankAccountHandler(account, depositMessengerService);
 	}
 
 	@Test
@@ -33,11 +33,10 @@ public class BankAccountHandlerTest {
 
 	@Test
 	public void initializedWithNullThrowsException() throws Exception {
-		assertThatThrownBy(() -> new BankAccountHandler(null, messengerService))
+		assertThatThrownBy(() -> new BankAccountHandler(null, depositMessengerService))
 				.isInstanceOf(NullPointerException.class);
 
-		assertThatThrownBy(() -> new BankAccountHandler(account, null))
-				.isInstanceOf(NullPointerException.class);
+		assertThatThrownBy(() -> new BankAccountHandler(account, null)).isInstanceOf(NullPointerException.class);
 	}
 
 	@Test
@@ -74,7 +73,7 @@ public class BankAccountHandlerTest {
 
 		handler.deposit(5000);
 
-		verify(messengerService).send("Foo Bar", 5000);
+		verify(depositMessengerService).send("Foo Bar", 5000);
 	}
 
 	@Test
@@ -83,5 +82,4 @@ public class BankAccountHandlerTest {
 
 		// handler.withdraw(account, 100);
 	}
-
 }

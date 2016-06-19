@@ -2,16 +2,16 @@ package no.mesan.kurs.enhetstesting;
 
 public class BankAccountHandler {
 
-	private final MessengerService messengerService;
+	private final DepositMessengerService depositMessengerService;
 	private final BankAccount account;
 
-	public BankAccountHandler(BankAccount account, MessengerService messengerService) {
-		if (account == null || messengerService == null) {
+	public BankAccountHandler(BankAccount account, DepositMessengerService depositMessengerService) {
+		if (account == null || depositMessengerService == null) {
 			throw new NullPointerException();
 		}
-		
+
 		this.account = account;
-		this.messengerService = messengerService;
+		this.depositMessengerService = depositMessengerService;
 	}
 
 	public boolean hasSufficientFunds(int amount) {
@@ -21,7 +21,7 @@ public class BankAccountHandler {
 	public void deposit(int amount) {
 		if (account.minimumDepositAmount() <= amount) {
 			account.deposit(amount);
-			messengerService.send(account.owner(), amount);
+			depositMessengerService.send(account.owner(), amount);
 		}
 	}
 

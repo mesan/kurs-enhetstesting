@@ -31,8 +31,6 @@ public class BankAccountHandlerTest {
 	public void initializedWithNullThrowsException() throws Exception {
 		assertThatThrownBy(() -> new BankAccountHandler(null))
 				.isInstanceOf(NullPointerException.class);
-
-		fail("Løs oppgave 4.");
 	}
 
 	@Test
@@ -44,24 +42,11 @@ public class BankAccountHandlerTest {
 
 	@Test
 	public void depositLegalAmount() throws Exception {
-		when(account.minimumDepositAmount()).thenReturn(100);
-
-		handler.deposit(500);
-
-		verify(account).deposit(500);
+		fail("Løs oppgave 3.");
 	}
 
 	@Test
 	public void depositIllegalAmount() throws Exception {
-		when(account.minimumDepositAmount()).thenReturn(1000);
-
-		handler.deposit(500);
-
-		verify(account, never()).deposit(anyInt());
-	}
-
-	@Test
-	public void messageIsSentToOwnerOnDeposit() throws Exception {
-		fail("Løs oppgave 4.");
+		fail("Løs oppgave 3.");
 	}
 }

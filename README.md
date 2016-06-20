@@ -1,13 +1,17 @@
 #Oppgaver til kurs i enhetstesting
 
-##Oppgave 4:
+##Oppgave 3:
 
-Nå ønsker vi å sende en melding til eieren av en konto i det det blir satt inn penger på en konto. Handleren vår må derfor initialiseres med en `DepositMessengerService` (via dennes konstruktør).
+Vi vil nå kunne sette inn penger på kontoen vår. Derfor må vi skrive tester og handlermetoden
 
-####Skriv 1 test og endre en annen:
+	 public void deposit(int amount)
 
- 1. Lag en test der man setter inn et gitt beløp, og verifiserer at meldingsservicen blir kalt med eiernavn og beløp.
- 2. Endre testen `initializedWithNullThrowsException` til å ta hensyn til initialisering med meldingsservicen.
+####Skriv 2 tester:
+
+ 1. Der man setter inn et lovlig beløp. Verifisér at metoden `deposit` blir kalt på kontoobjektet med det gitte beløpet.
+ 2. Der man setter inn mindre penger enn kontoen sin `minimumDepositAmount`. Dette skal medføre at ingen deposit-metode blir kalt på kontoobjektet vårt.
+
+Hint:  [http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html#4](http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html#4)
 
 ----------
 

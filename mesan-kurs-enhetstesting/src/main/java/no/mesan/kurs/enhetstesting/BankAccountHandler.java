@@ -16,10 +16,4 @@ public class BankAccountHandler {
 		return account.balance() >= amount;
 	}
 
-	public void deposit(int amount) {
-		if (account.minimumDepositAmount() <= amount) {
-			account.deposit(amount);
-		}
-	}
-
 }

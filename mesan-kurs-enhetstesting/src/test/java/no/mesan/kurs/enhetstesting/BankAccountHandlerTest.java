@@ -31,14 +31,6 @@ public class BankAccountHandlerTest {
 	}
 
 	@Test
-	public void initializedWithNullThrowsException() throws Exception {
-		assertThatThrownBy(() -> new BankAccountHandler(null, depositMessengerService))
-				.isInstanceOf(NullPointerException.class);
-
-		assertThatThrownBy(() -> new BankAccountHandler(account, null)).isInstanceOf(NullPointerException.class);
-	}
-
-	@Test
 	public void canCheckForSufficientFunds() throws Exception {
 		when(account.balance()).thenReturn(2000);
 
@@ -71,6 +63,14 @@ public class BankAccountHandlerTest {
 		handler.deposit(5000);
 
 		verify(depositMessengerService).send("Foo Bar", 5000);
+	}
+
+	@Test
+	public void initializedWithNullThrowsException() throws Exception {
+		assertThatThrownBy(() -> new BankAccountHandler(null, depositMessengerService))
+				.isInstanceOf(NullPointerException.class);
+
+		assertThatThrownBy(() -> new BankAccountHandler(account, null)).isInstanceOf(NullPointerException.class);
 	}
 
 	@Test

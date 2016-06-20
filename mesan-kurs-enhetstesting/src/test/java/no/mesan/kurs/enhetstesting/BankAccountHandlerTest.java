@@ -1,7 +1,6 @@
 package no.mesan.kurs.enhetstesting;
 
 import static org.assertj.core.api.Assertions.*;
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 
 import org.junit.Before;
@@ -40,12 +39,10 @@ public class BankAccountHandlerTest {
 	}
 
 	@Test
-	public void retrievesBalanceWhileCheckingForSufficientFunds() throws Exception {
+	public void canCheckForSufficientFunds() throws Exception {
 		when(account.balance()).thenReturn(2000);
 
 		assertThat(handler.hasSufficientFunds(1000)).isTrue();
-
-		verify(account).balance();
 	}
 
 	@Test
@@ -80,6 +77,21 @@ public class BankAccountHandlerTest {
 	public void withdrawLegalAmount() throws Exception {
 		when(account.balance()).thenReturn(500);
 
-		// handler.withdraw(account, 100);
+		handler.withdraw(100);
+		verify(account).withdraw(100);
+	}
+
+	@Test
+	public void withdrawTooLargeAmount() throws Exception {
+		when(account.balance()).thenReturn(500);
+
+		handler.withdraw(600);
+		verify(account, never()).withdraw(anyInt());
+	}
+
+	@Test
+	public void withdrawNegativeAmount() throws Exception {
+		assertThatThrownBy(() -> handler.withdraw(-1)).isInstanceOf(IllegalArgumentException.class);
+		verify(account, never()).withdraw(anyInt());
 	}
 }

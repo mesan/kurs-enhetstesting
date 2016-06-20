@@ -11,7 +11,7 @@ Vi vil nå kunne sette inn penger på kontoen vår. Derfor må vi skrive tester 
  1. Der man setter inn et lovlig beløp. Verifisér at metoden `deposit` blir kalt på kontoobjektet med det gitte beløpet.
  2. Der man setter inn mindre penger enn kontoen sin `minimumDepositAmount`. Dette skal medføre at ingen deposit-metode blir kalt på kontoobjektet vårt.
 
-Hint:  [http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html#4](http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html#4)
+Hint:  [http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html#exact_verification](http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html#exact_verification)
 
 ----------
 

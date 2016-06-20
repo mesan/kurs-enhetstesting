@@ -18,6 +18,8 @@ Vi ønsker nå å kunne ta ut penger fra en konto, så du må skrive tester og f
  3. Der man tar ut et beløp som er negativt. Dette skal medføre at det blir kastet et `IllegalArgumentException` fra handleren. Heller ikke her skal kontoobjektet røres.
  
 ----------
+## [Fullstendig løsningsforslag] [losning]
+----------
 
 > Written with [StackEdit](https://stackedit.io/).
 
@@ -26,3 +28,4 @@ Vi ønsker nå å kunne ta ut penger fra en konto, så du må skrive tester og f
 [oppgave-3]: https://github.com/mesan/kurs-enhetstesting/tree/oppgave-3
 [oppgave-4]: https://github.com/mesan/kurs-enhetstesting/tree/oppgave-4
 [oppgave-5]: https://github.com/mesan/kurs-enhetstesting/tree/oppgave-5
+[losning]: https://github.com/mesan/kurs-enhetstesting/tree/losning

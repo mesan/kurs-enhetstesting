@@ -17,17 +17,22 @@ public class BankAccountHandlerTest {
 	@Mock
 	private BankAccount account;
 
-	@Mock
-	private DepositMessengerService depositMessengerService;
-
 	@Before
 	public void setUp() {
-		handler = new BankAccountHandler(account, depositMessengerService);
+		handler = new BankAccountHandler(account);
 	}
 
 	@Test
 	public void testIsInitialized() throws Exception {
 		assertThat(handler).isNotNull();
+	}
+
+	@Test
+	public void initializedWithNullThrowsException() throws Exception {
+		assertThatThrownBy(() -> new BankAccountHandler(null))
+				.isInstanceOf(NullPointerException.class);
+
+		fail("Løs oppgave 4.");
 	}
 
 	@Test
@@ -57,34 +62,6 @@ public class BankAccountHandlerTest {
 
 	@Test
 	public void messageIsSentToOwnerOnDeposit() throws Exception {
-		when(account.minimumDepositAmount()).thenReturn(1000);
-		when(account.owner()).thenReturn("Foo Bar");
-
-		handler.deposit(5000);
-
-		verify(depositMessengerService).send("Foo Bar", 5000);
-	}
-
-	@Test
-	public void initializedWithNullThrowsException() throws Exception {
-		assertThatThrownBy(() -> new BankAccountHandler(null, depositMessengerService))
-				.isInstanceOf(NullPointerException.class);
-
-		assertThatThrownBy(() -> new BankAccountHandler(account, null)).isInstanceOf(NullPointerException.class);
-	}
-
-	@Test
-	public void withdrawLegalAmount() throws Exception {
-		fail("Løs oppgave 5.");
-	}
-
-	@Test
-	public void withdrawTooLargeAmount() throws Exception {
-		fail("Løs oppgave 5.");
-	}
-
-	@Test
-	public void withdrawNegativeAmount() throws Exception {
-		fail("Løs oppgave 5.");
+		fail("Løs oppgave 4.");
 	}
 }

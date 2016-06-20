@@ -75,23 +75,16 @@ public class BankAccountHandlerTest {
 
 	@Test
 	public void withdrawLegalAmount() throws Exception {
-		when(account.balance()).thenReturn(500);
-
-		handler.withdraw(100);
-		verify(account).withdraw(100);
+		fail("Løs oppgave 5.");
 	}
 
 	@Test
 	public void withdrawTooLargeAmount() throws Exception {
-		when(account.balance()).thenReturn(500);
-
-		handler.withdraw(600);
-		verify(account, never()).withdraw(anyInt());
+		fail("Løs oppgave 5.");
 	}
 
 	@Test
 	public void withdrawNegativeAmount() throws Exception {
-		assertThatThrownBy(() -> handler.withdraw(-1)).isInstanceOf(IllegalArgumentException.class);
-		verify(account, never()).withdraw(anyInt());
+		fail("Løs oppgave 5.");
 	}
 }

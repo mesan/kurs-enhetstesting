@@ -25,12 +25,4 @@ public class BankAccountHandler {
 		}
 	}
 
-	public void withdraw(int amount) {
-		if (amount < 0) {
-			throw new IllegalArgumentException("Cannot withdraw a negative amount.");
-		} else if (amount <= account.balance()) {
-			account.withdraw(amount);
-		}
-	}
-
 }

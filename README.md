@@ -1,20 +1,20 @@
 #Oppgaver til kurs i enhetstesting
 
-##Oppgave 2:
+##Oppgave 1:
 
-Vi vil nå kunne sjekke at en konto har tilstrekkelig høy balanse til å ta ut et gitt beløp. Derfor må vi skrive tester og handlermetoden
+Dette er den første i en serie oppgaver som tar for seg en meget forenklet modell av håndteringen av en bankkonto.
 
-	 public boolean hasSufficientFunds(int amount)
+En bankkonto må implementere interfacet `BankAccount`. For å manipulere en konto bruker vi en handler representert ved klassen `BankAccountHandler`. Det er denne klassen du skal skrive enhetstester for nå. 
 
-For denne funksjonaliteten så trenger handleren vår en avhengighet i form av en `BankAccount`. Denne skal initialiseres gjennom handleren sin konstruktør.
+Disse enhetstestene skal legges i klassen `BankAccountHandlerTest` som du finner under katalogen `mesan-kurs-enhetstesting/src/test/java/no/mesan/kurs/enhetstesting`.
 
-####Skriv 2 tester:
+Dersom du får problemer med en oppgave kan du gå videre til neste oppgave-branch der du samtidig finner et løsningsforslag til den forrige oppgaven.
 
- 1. Der du verifiserer at dersom man initialiserer handleren med en konto som er `null`, så skal handleren kaste en `NullPointerException`.
- 2. Der du verifiserer at handleren kan sjekke om kontoen den er initialisert med har tilstrekkelige midler til å ta ut et gitt beløp. Du kan trenge å lage en stub for `BankAccount.balance`.
+####Skriv 1 test:
 
-Hint:  [https://joel-costigliola.github.io/assertj/assertj-core-features-highlight.html#exception-assertion](https://joel-costigliola.github.io/assertj/assertj-core-features-highlight.html#exception-assertion)
-Hint: [http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html#2](http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html#2)
+ 1. Skriv en test der du verifiserer at handleren vi konstruerer i `setUp` ikke er null. Dette er en test vi kanskje ikke naturlig ville skrevet, men er tatt med her for å få deg i gang.
+
+Hint:  [https://joel-costigliola.github.io/assertj/assertj-core-quick-start.html](https://joel-costigliola.github.io/assertj/assertj-core-quick-start.html)
 
 ----------
 

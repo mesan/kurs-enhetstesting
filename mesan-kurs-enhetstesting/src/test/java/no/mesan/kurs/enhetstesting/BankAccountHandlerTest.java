@@ -29,24 +29,11 @@ public class BankAccountHandlerTest {
 
 	@Test
 	public void initializedWithNullThrowsException() throws Exception {
-		assertThatThrownBy(() -> new BankAccountHandler(null))
-				.isInstanceOf(NullPointerException.class);
+		fail("Løs oppgave 2.");
 	}
 
 	@Test
 	public void canCheckForSufficientFunds() throws Exception {
-		when(account.balance()).thenReturn(2000);
-
-		assertThat(handler.hasSufficientFunds(1000)).isTrue();
-	}
-
-	@Test
-	public void depositLegalAmount() throws Exception {
-		fail("Løs oppgave 3.");
-	}
-
-	@Test
-	public void depositIllegalAmount() throws Exception {
-		fail("Løs oppgave 3.");
+		fail("Løs oppgave 2.");
 	}
 }

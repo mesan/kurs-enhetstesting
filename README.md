@@ -16,7 +16,6 @@ Dersom du får problemer med en oppgave kan du gå videre til neste oppgave-bran
 
 Hint:  [https://joel-costigliola.github.io/assertj/assertj-core-quick-start.html](https://joel-costigliola.github.io/assertj/assertj-core-quick-start.html)
 
-----------
 ## [Oppgave 2] [oppgave-2]
 ## [Oppgave 3] [oppgave-3]
 ## [Oppgave 4] [oppgave-4]

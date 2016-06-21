@@ -23,7 +23,7 @@ Vi vil nå kunne sjekke at en konto har tilstrekkelig høy balanse til å ta ut 
 
 For denne funksjonaliteten så trenger handleren vår en avhengighet i form av en `BankAccount`. Denne skal initialiseres gjennom handleren sin konstruktør.
 
-####Skriv 2 tester:
+####Skriv to tester:
 
  1. Der du verifiserer at dersom man initialiserer handleren med en konto som er `null`, så skal handleren kaste en `NullPointerException`.
  2. Der du verifiserer at handleren kan sjekke om kontoen den er initialisert med har tilstrekkelige midler til å ta ut et gitt beløp. Du kan trenge å lage en stub for `BankAccount.balance`.

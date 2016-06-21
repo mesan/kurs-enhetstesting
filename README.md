@@ -24,7 +24,7 @@ Vi ønsker nå å kunne ta ut penger fra en konto, så du må skrive tester og f
 
     public void withdraw(int amount)
 
-####Skriv 3 tester:
+####Skriv tre tester:
 
  1. Der man tar ut et lovlig beløp i forhold til balansen. Dette skal medføre at man kaller `withdraw` med det lovlige beløpet på kontoobjektet.
  2. Der man tar ut et beløp som er for stort i forhold til balansen. Dette skal IKKE medføre at man kaller `withdraw` på kontoobjektet.

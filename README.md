@@ -1,5 +1,18 @@
 #Oppgaver til kurs i enhetstesting
 
+##Forutsetninger
+
+ - [Git](https://git-scm.com/)
+ - [JDK 8+](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+ - [Maven](https://maven.apache.org/)
+
+## Ressurser
+
+ - [https://en.wikipedia.org/wiki/JUnit](https://en.wikipedia.org/wiki/JUnit)
+ - [https://joel-costigliola.github.io/assertj/assertj-core-quick-start.html](https://joel-costigliola.github.io/assertj/assertj-core-quick-start.html)
+ - [http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html](http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html)
+ - [http://martinfowler.com/articles/mocksArentStubs.html](http://martinfowler.com/articles/mocksArentStubs.html)
+
 ## [Oppgave 1] [oppgave-1]
 ## [Oppgave 2] [oppgave-2]
 

@@ -23,7 +23,7 @@ Disse enhetstestene skal legges i klassen `BankAccountHandlerTest` som du finner
 
 Dersom du får problemer med en oppgave kan du gå videre til neste oppgave-branch der du samtidig finner et løsningsforslag til den forrige oppgaven.
 
-####Skriv 1 test:
+####Skriv én test:
 
  1. Skriv en test der du verifiserer at handleren vi konstruerer i `setUp` ikke er null. Dette er en test vi kanskje ikke naturlig ville skrevet, men er tatt med her for å få deg i gang.
 

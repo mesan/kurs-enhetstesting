@@ -28,8 +28,7 @@ For denne funksjonaliteten så trenger handleren vår en avhengighet i form av e
  1. Der du verifiserer at dersom man initialiserer handleren med en konto som er `null`, så skal handleren kaste en `NullPointerException`.
  2. Der du verifiserer at handleren kan sjekke om kontoen den er initialisert med har tilstrekkelige midler til å ta ut et gitt beløp. Du kan trenge å lage en stub for `BankAccount.balance`.
 
-Hint:  [https://joel-costigliola.github.io/assertj/assertj-core-features-highlight.html#exception-assertion](https://joel-costigliola.github.io/assertj/assertj-core-features-highlight.html#exception-assertion)
-
+Hint:  [https://joel-costigliola.github.io/assertj/assertj-core-features-highlight.html#exception-assertion](https://joel-costigliola.github.io/assertj/assertj-core-features-highlight.html#exception-assertion)  
 Hint: [http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html#2](http://site.mockito.org/mockito/docs/current/org/mockito/Mockito.html#2)
 
 ## [Oppgave 3] [oppgave-3]
